@@ -4,7 +4,7 @@ import axios from 'axios'
 function Heroes(){
     const url = 'https://api.opendota.com/api/heroStats';
     const [hero, setHero] = useState(null);
-    const [selectedHero, setSelectedHero] = useState(2);
+    const [selectedHero, setSelectedHero] = useState(1);
 
 
 
@@ -26,7 +26,7 @@ function Heroes(){
                 <div className="hero_wrapper">
                     
                     {hero.length ? hero.map((i) => {
-                        if(i.id == 1) {
+                        if(selectedHero == i.id) {
                             return (
                             <div className={'hero_item' + ' ' + i.localized_name}>
                                 <h1>{i.localized_name}</h1>
@@ -35,7 +35,7 @@ function Heroes(){
                             </div>)
                         } else {
                             return (
-                            <div className={'herodiv' + ' ' + i.localized_name}>
+                            <div className={'herodiv' + ' ' + i.localized_name} onClick={()=>setSelectedHero(i.id)}>
                                 <h1>{i.localized_name}</h1>
                                 <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
                                 <div className="heroImg"><img src={'https://steamcdn-a.akamaihd.net/' + i.icon}/></div>
