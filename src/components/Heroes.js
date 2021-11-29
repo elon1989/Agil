@@ -20,20 +20,28 @@ function Heroes(){
     }, [url])
 
     if(hero){
-        console.log(hero.length)
+        console.log(hero)
         return (
             <>
-                <ul>
+                <div className="hero_wrapper">
                     
                     {hero.length ? hero.map((i) => {
-                    console.log(i)
-                    return (<>
-                    <li><h1>{i.localized_name}</h1></li>
-                    <li>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate </li>
-                    <img src={'https://steamcdn-a.akamaihd.net/' + i.icon}/>
-                    </>)
-                    }): ''}
-                </ul>
+                        if(i.id == 1) {
+                            return (
+                            <div className={'hero_item' + ' ' + i.localized_name}>
+                                <h1>{i.localized_name}</h1>
+                                <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
+                                <div className="heroImg"><img src={'https://steamcdn-a.akamaihd.net/' + i.img}/></div>
+                            </div>)
+                        } else {
+                            return (
+                            <div className={'herodiv' + ' ' + i.localized_name}>
+                                <h1>{i.localized_name}</h1>
+                                <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
+                                <div className="heroImg"><img src={'https://steamcdn-a.akamaihd.net/' + i.icon}/></div>
+                            </div>)}
+                        }): ''}
+                </div>
                 
             </>
         )

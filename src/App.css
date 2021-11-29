@@ -1,7 +1,10 @@
 .App {
   text-align: center;
-  background-color: #1C242D;
+  background: linear-gradient(#11111d, #071f09);
   color:beige;
+  display:flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .App-header {
@@ -18,4 +21,35 @@
 .App-link {
   color: #61dafb;
 }
-
+.hero_wrapper {
+  display:grid;
+  grid-gap:20px;
+  grid-template-areas: 
+    'showcase showcase showcase showcase'
+    'showcase showcase showcase showcase'
+    'showcase showcase showcase showcase'
+    ;
+}
+.hero_item {
+  grid-area: showcase;
+  height:400px;
+  background: #1C242D;
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.hero_item:hover {
+  background:#212a35;
+}
+.herodiv {
+  max-width: 20rem;
+  padding:1rem;
+  background: #1C242D;
+  grid-template-columns:repeat(4, 1fr);
+  box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
+}
+.herodiv:hover {
+  background:#212a35;
+  cursor: pointer;
+}
+.heroImg {
+  margin-top:2rem;
+}
