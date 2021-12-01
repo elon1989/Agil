@@ -18,9 +18,30 @@ function Heroes(){
             
         })
     }, [url])
+    
+
+
+    function SortAlphabetically() {
+        hero.sort((a, b) => a.localized_name.localeCompare(b.localized_name))
+    }
+
+    // function winRate() {
+    //     for (let i = 0; i < hero.length;  i++) {
+    //     let winrate = Math.round(hero[i].pro_win / hero[i].pro_pick * 100) + '% Win Rate';
+    //     hero.forEach(function (element) {
+    //         element.winrate = winrate;
+    //     })   
+    //     console.log(winrate)
+    // }
+    // }
 
     if(hero){
+
+        SortAlphabetically();
+        // winRate();      
+        
         console.log(hero)
+
         return (
             <>
                 <div className="hero_wrapper">
