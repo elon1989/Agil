@@ -80,6 +80,7 @@ nav {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  z-index: 100000;
 }
 
 .navMenu {
@@ -145,11 +146,26 @@ a {
 .friends {
   display: flex;
   justify-content: space-around;
-  width: 50%;
+  padding-top: 40px;
   text-align: center;
 }
 
+.persons {
+  display: flex;
+  flex-direction: column;
+  color: #ff9000;
+}
 
+.persons > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about-wrapper > h1 {
+  color: #ff9000;
+}
 
 
 /* HOME */
@@ -190,6 +206,7 @@ a {
   padding-top: 50px;
   -webkit-filter: drop-shadow(5px 5px 5px #000000);
   filter: drop-shadow(5px 5px 5px #000000);
+  z-index: 1;
 }
 
 .small-button {
@@ -215,4 +232,22 @@ a {
 
 .stats {
   padding-top: 50px;
+}
+
+/* FOOTER */
+.footer {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  background: #262729;
+  bottom: 0px;
+  overflow: hidden;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+  border-top: 1px solid black;
+  color: #fd9e21;
+}
+
+.footer > div {
+  padding-top: 40px;
 }
