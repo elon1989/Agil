@@ -16,6 +16,28 @@ function Heroes(){
             setHero(response.data)
         })
     }, [url])
+    
+
+
+    function SortAlphabetically() {
+        hero.sort((a, b) => a.localized_name.localeCompare(b.localized_name))
+        console.log()
+    }
+
+    function SortWinRate() {
+        hero.sort((a, b) => b.winrate - a.winrate)
+        console.log()
+    }
+
+    let newArray = [];
+
+     function winRate() {
+         let newArray = hero.map((i) => Math.round(i.pro_win / i.pro_pick * 100));
+         for (let i = 0; i < hero.length; i++) {
+             hero[i].winrate = newArray[i];
+            }
+         console.log(hero)
+ }
 
     const dispatch = useDispatch();
 
@@ -26,12 +48,17 @@ function Heroes(){
     
 
     if(hero){
+
+       /* <button onClick={()=>handlegetGame()}></button>*/
+
+        winRate();    
+        // Kommer att lägga till knappar med onclick för funktionerna sen    
+        SortAlphabetically();
+        SortWinRate();
+
         return (
             <>
-            <button onClick={()=>handlegetGame()}></button>
-                <div className="hero_wrapper">
-                    
-                    
+                <div className="hero_wrapper">   
                     {hero.length ? hero.map((i) => {
                         if(selectedHero == i.id) {
                             return (
