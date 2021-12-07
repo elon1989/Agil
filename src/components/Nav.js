@@ -15,11 +15,11 @@ function Nav() {
                     League Of Legends
                 </li>
                 <li>
-                    <Link to='/heroes' style={{color: "#fff", textDecoration: "none"}} element={Heroes}>DOTA 2</Link>
+                    <Link to='/heroes' className='navItem' element={Heroes}>DOTA 2</Link>
                 </li>
                 <li>Heroes of Newerth</li>
                 <li>
-                <Link to='/about' style={{color: "#fff", textDecoration: "none"}} element={About}>About</Link>
+                <Link to='/about' className='navItem' element={About}>About</Link>
                 </li>
               </ul>
             </nav>

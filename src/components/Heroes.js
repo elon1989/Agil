@@ -1,29 +1,38 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios'
+import { useDispatch, useSelector } from "react-redux";
+import {changeURL, getGame} from './GameSlice'
 
 function Heroes(){
     const url = 'https://api.opendota.com/api/heroStats';
     const [hero, setHero] = useState(null);
     const [selectedHero, setSelectedHero] = useState(1);
+    const [updatedArray, setUpdatedArray] = useState([]);
 
-
-
-    /* function selectHero(){
-    } */
-
+    
     useEffect(() => {
         axios.get(url)
         .then(response => {
             setHero(response.data)
-            
         })
     }, [url])
 
+    const dispatch = useDispatch();
+
+    const handlegetGame = () => {
+        dispatch(getGame());
+    };
+
+    
+
     if(hero){
-        console.log(hero)
+        /* console.log(hero) */
+        newArray()
         return (
             <>
+            <button onClick={()=>handlegetGame()}></button>
                 <div className="hero_wrapper">
+                    
                     
                     {hero.length ? hero.map((i) => {
                         if(selectedHero == i.id) {
@@ -45,12 +54,13 @@ function Heroes(){
                 
             </>
         )
+    } else {
+        return (
+            <div>
+    
+            </div>
+        )
     }
-    return (
-        <div>
-
-        </div>
-    )
 }
 
 export default Heroes

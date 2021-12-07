@@ -22,6 +22,12 @@
 .App-link {
   color: #61dafb;
 }
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
 .hero_wrapper {
   display:grid;
   grid-gap:20px;
@@ -97,8 +103,12 @@ nav {
   text-shadow: #fff;
 }
 
-
 .navMenu > li:hover {
+  color: red;
+  cursor: pointer;
+}
+
+.navItem:hover {
   color: red;
   cursor: pointer;
 }
@@ -111,4 +121,12 @@ nav {
   width: 100%;
   color: #0f0f0f;
   height: 100vh;
+}
+
+
+button {
+  height:200px;
+  width: 200px;
+  background:red;
+  margin-top:200px;
 }
