@@ -26,8 +26,6 @@ function Heroes(){
     
 
     if(hero){
-        /* console.log(hero) */
-        newArray()
         return (
             <>
             <button onClick={()=>handlegetGame()}></button>

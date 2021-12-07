@@ -3,23 +3,28 @@ import '../App.css';
 import {Link} from 'react-router-dom'
 import Heroes from './Heroes'
 import About from './About'
+import Home from './Home'
+import Logo from '../img/logo-v1.png'
 
 
 function Nav() {
     return (
         <header>
             <nav>
-            <h3>Logo</h3>
+            <Link to='/' className="navItem" element={Home}><img src={Logo} alt=""></img></Link>
             <ul className="navMenu">
                 <li>
-                    League Of Legends
+                    <span className="menu-button">League Of Legends</span>
                 </li>
                 <li>
-                    <Link to='/heroes' className='navItem' element={Heroes}>DOTA 2</Link>
+                    <span className="menu-button"><Link to='/heroes' className="navItem" element={Heroes}>DOTA 2</Link></span>
                 </li>
-                <li>Heroes of Newerth</li>
                 <li>
-                <Link to='/about' className='navItem' element={About}>About</Link>
+                    <span className="menu-button">Heroes of Newerth</span>
+
+                </li>
+                <li>
+                    <span className="menu-button"><Link to='/about' className="navItem" element={About}>About</Link></span>
                 </li>
               </ul>
             </nav>
