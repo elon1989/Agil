@@ -63,9 +63,18 @@ function Heroes(){
                         if(selectedHero == i.id) {
                             return (
                             <div className={'hero_item' + ' ' + i.localized_name}>
-                                <h1>{i.localized_name}</h1>
-                                <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
-                                <div className="heroImg"><img src={'https://steamcdn-a.akamaihd.net/' + i.img}/></div>
+                                <div className="heroleft">
+                                    <div>Base agi: {i.base_agi}</div>
+                                    <div>Base str: {i.base_str}</div>
+                                    <div>Base int: {i.base_int}</div>
+                                </div>
+                                <div className="herocenter">
+                                    <h1>{i.localized_name}</h1>
+                                    <div className="heroImg"><img className="heroPic" src={'https://steamcdn-a.akamaihd.net/' + i.img}/></div>
+                                </div>
+                                <div className="heroright">
+                                    <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
+                                </div>
                             </div>)
                         } else {
                             return (

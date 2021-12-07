@@ -40,6 +40,7 @@ a {
 }
 .hero_item {
   grid-area: showcase;
+  display:flex;
   height:400px;
   background: #1C242D;
   box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
@@ -47,6 +48,29 @@ a {
 .hero_item:hover {
   background:#212a35;
 }
+.heroleft {
+  display:flex;
+  width:30%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-size: 2rem;
+}
+.herocenter {
+  display:flex;
+  width:40%;
+  align-items: center;
+  flex-direction: column;
+}
+.heroright {
+  font-size: 2rem;
+  display:flex;
+  width:30%;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
 .herodiv {
   max-width: 20rem;
   padding:1rem;
@@ -60,6 +84,10 @@ a {
 }
 .heroImg {
   margin-top:2rem;
+}
+.heroPic {
+  width:300px;
+  height:200px;
 }
 
 
