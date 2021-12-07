@@ -23,29 +23,35 @@ function Heroes(){
 
     function SortAlphabetically() {
         hero.sort((a, b) => a.localized_name.localeCompare(b.localized_name))
+        console.log()
     }
 
-    // function winRate() {
-    //     for (let i = 0; i < hero.length;  i++) {
-    //     let winrate = Math.round(hero[i].pro_win / hero[i].pro_pick * 100) + '% Win Rate';
-    //     hero.forEach(function (element) {
-    //         element.winrate = winrate;
-    //     })   
-    //     console.log(winrate)
-    // }
-    // }
+    function SortWinRate() {
+        hero.sort((a, b) => b.winrate - a.winrate)
+        console.log()
+    }
+
+    let newArray = [];
+
+     function winRate() {
+         let newArray = hero.map((i) => Math.round(i.pro_win / i.pro_pick * 100));
+         for (let i = 0; i < hero.length; i++) {
+             hero[i].winrate = newArray[i];
+            }
+         console.log(hero)
+ }
 
     if(hero){
 
+        winRate();    
+    // Kommer att lägga till knappar med onclick för funktionerna sen    
         SortAlphabetically();
-        // winRate();      
-        
-        console.log(hero)
+        SortWinRate();
 
         return (
             <>
-                <div className="hero_wrapper">
-                    
+
+                <div className="hero_wrapper">   
                     {hero.length ? hero.map((i) => {
                         if(selectedHero == i.id) {
                             return (
