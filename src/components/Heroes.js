@@ -17,19 +17,17 @@ function Heroes(){
         })
     }, [url])
     
-
-
-    
     const SortAlphabetically = () => {
         let newArray = hero.sort((a, b) => a.localized_name.localeCompare(b.localized_name));
-            setHero(newArray);
-            console.log(newArray)
+            setHero([...newArray]);
+            console.log(hero)
     }
 
-
-    
     function SortWinRate() {
-        hero.sort((a, b) => b.winrate - a.winrate)
+        console.log(hero)
+        let newArray = hero.sort((a, b) => b.winrate - a.winrate)
+        setHero([...newArray])
+        console.log(hero)
     }
 
     function logThing() {
@@ -41,6 +39,7 @@ function Heroes(){
          for (let i = 0; i < hero.length; i++) {
              hero[i].winrate = winArray[i];
             }
+            console.log(hero)
  }
 
     const dispatch = useDispatch();
@@ -54,15 +53,15 @@ function Heroes(){
     if(hero){
 
        /* <button onClick={()=>handlegetGame()}></button>*/
-        winRate();    
+        winRate();  
         // Kommer att lägga till knappar med onclick för funktionerna sen    
       //  SortAlphabetically();
-        SortWinRate();
+        /* SortWinRate(); */
 
         return (
             <>
             <button className='sort_button' onClick={() => SortAlphabetically()}>Sort</button>
-            <button className='sort_button' onClick={()=>logThing()}>Log</button>
+            <button className='sort_button' onClick={() => SortWinRate()}>Log</button>
                 <div className="hero_wrapper">   
                     {hero.length ? hero.map((i) => {
                         if(selectedHero == i.id) {
@@ -78,10 +77,11 @@ function Heroes(){
                                     <div className="heroImg"><img className="heroPic" src={'https://steamcdn-a.akamaihd.net/' + i.img}/></div>
                                 </div>
                                 <div className="heroright">
-                                    {/* <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div>  */}
                                     <div>{i.winrate}% Win rate</div> 
                                 </div>
                             </div>)
+                        } else if (i.localized_name === 'Marci'){
+                            return ''
                         } else {
                             return (
                             <div className={'herodiv' + ' ' + i.localized_name} onClick={()=>setSelectedHero(i.id)}>
