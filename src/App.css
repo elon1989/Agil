@@ -30,7 +30,7 @@
     'showcase showcase showcase showcase'
     'showcase showcase showcase showcase'
     ;
-  padding-top: 200px;
+  padding-top: 50px;
 }
 .hero_item {
   grid-area: showcase;
@@ -109,6 +109,61 @@ nav {
   padding-top: 200px;
   background: linear-gradient(#11111d, #071f09);
   width: 100%;
+<<<<<<< Updated upstream
   color: #0f0f0f;
+=======
+  color: #fff;
+  height: 100vh;
+}
+.sortSection {
+  display: flex;
+  justify-content: space-evenly;
+  width:60vw;
+}
+.sortContainer {
+  
+  margin-top:250px;
+}
+
+.sort_button {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background:#ff9000;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 6px, rgba(0, 0, 0, 0.12) 0px -6px 6px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 4px 5px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.friends {
+  display: flex;
+  justify-content: space-around;
+  padding-top: 40px;
+  text-align: center;
+}
+
+.persons {
+  display: flex;
+  flex-direction: column;
+  color: #ff9000;
+}
+
+.persons > img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.about-wrapper > h1 {
+  color: #ff9000;
+}
+
+
+/* HOME */
+.home {
+  display: flex;
+  padding: 200px 8% 8% 8%;
+>>>>>>> Stashed changes
   height: 100vh;
 }
