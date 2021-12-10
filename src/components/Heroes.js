@@ -54,25 +54,15 @@ function Heroes(){
     if(hero){
 
        /* <button onClick={()=>handlegetGame()}></button>*/
-<<<<<<< HEAD
-
-        winRate();    
-        // Kommer att lägga till knappar med onclick för funktionerna sen    
-        SortAlphabetically();
-=======
         winRate();    
         // Kommer att lägga till knappar med onclick för funktionerna sen    
       //  SortAlphabetically();
->>>>>>> 950a0a56b8ca8d727bfdd8f4eca0026aef7c152b
         SortWinRate();
 
         return (
             <>
-<<<<<<< HEAD
-=======
             <button className='sort_button' onClick={() => SortAlphabetically()}>Sort</button>
             <button className='sort_button' onClick={()=>logThing()}>Log</button>
->>>>>>> 950a0a56b8ca8d727bfdd8f4eca0026aef7c152b
                 <div className="hero_wrapper">   
                     {hero.length ? hero.map((i) => {
                         if(selectedHero == i.id) {
@@ -88,11 +78,8 @@ function Heroes(){
                                     <div className="heroImg"><img className="heroPic" src={'https://steamcdn-a.akamaihd.net/' + i.img}/></div>
                                 </div>
                                 <div className="heroright">
-<<<<<<< HEAD
-                                    <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div> 
-=======
+                                    {/* <div>{Math.round(i.pro_win / i.pro_pick * 100)}% Win rate</div>  */}
                                     <div>{i.winrate}% Win rate</div> 
->>>>>>> 950a0a56b8ca8d727bfdd8f4eca0026aef7c152b
                                 </div>
                             </div>)
                         } else {
