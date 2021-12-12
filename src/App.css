@@ -109,9 +109,6 @@ nav {
   padding-top: 200px;
   background: linear-gradient(#11111d, #071f09);
   width: 100%;
-<<<<<<< Updated upstream
-  color: #0f0f0f;
-=======
   color: #fff;
   height: 100vh;
 }
@@ -164,6 +161,5 @@ nav {
 .home {
   display: flex;
   padding: 200px 8% 8% 8%;
->>>>>>> Stashed changes
   height: 100vh;
 }
