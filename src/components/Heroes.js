@@ -129,7 +129,7 @@ function Heroes(){
 
        /* <button onClick={()=>handlegetGame()}></button>*/
         winRate();  
-        legCount();
+      //  legCount();
         // Kommer att lägga till knappar med onclick för funktionerna sen    
       //  SortAlphabetically();
       //  SortWinRate();
