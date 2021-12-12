@@ -1,5 +1,5 @@
-/* import { configureStore } from '@reduxjs/toolkit';
-import gameSlice from './components/gameSlice';
+import { configureStore } from '@reduxjs/toolkit';
+import GameReducer from './components/GameSlice';
 
 export default configureStore({
   reducer: {
@@ -7,4 +7,3 @@ export default configureStore({
   },
 });
 
- */

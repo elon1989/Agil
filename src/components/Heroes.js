@@ -6,11 +6,11 @@ import {changeURL, getGame} from './GameSlice'
 function Heroes(){
     const url = 'https://api.opendota.com/api/heroStats';
     const [hero, setHero] = useState();
-    const [legAmount, setLegAmount] = useState();
+    const [legAmount, setLegAmount] = useState([]);
     const [selectedHero, setSelectedHero] = useState(1);
     const [updatedArray, setUpdatedArray] = useState([]);
  
-    let legArray = 
+    var legArray = 
     [
         2,
         2,4,2,2,
@@ -34,7 +34,7 @@ function Heroes(){
         2,4,4,2,
         2,2,6,10,
         2,2,2,2,
-        6,6,0,6,
+        4,6,0,6,
         0,2,2,0,
         2,4,4,4,
         2,2,2,6,
@@ -42,7 +42,7 @@ function Heroes(){
         2,4,2,2,
         2,2,2,2,
         2,2,2,2,
-        2,6,2,2,
+        2,6,2,2
     ];
 
     useEffect(() => {
@@ -59,7 +59,7 @@ function Heroes(){
     
     const SortAlphabetically = () => {
         let newArray = hero.sort((a, b) => a.localized_name.localeCompare(b.localized_name));
-            setHero(newArray);
+            setHero([...newArray]);
             console.log(newArray)
     }
 
@@ -78,7 +78,7 @@ function Heroes(){
 
     function SortWinRateReverse() {
         console.log(hero)
-        let newArray = hero.sort((a, b) => a.winrate - b.winrate)
+        let newArray = hero.sort((a, b) => a.winrate - b.winrate);
         setHero([...newArray]);
         console.log(hero)
     }
@@ -88,7 +88,7 @@ function Heroes(){
         let newArray = hero.sort((a, b) => b.legs - a.legs);
         setLegAmount([...newLegArray]);        
         setHero([...newArray]);
-        console.log(legAmount);
+        console.log(hero);
     }
 
     function SortLegsReverse() {
@@ -96,7 +96,7 @@ function Heroes(){
         let newArray = hero.sort((a, b) => a.legs - b.legs)
         setHero([...newArray]);
         setLegAmount([...newLegArray]);
-        console.log(legAmount)
+        console.log(hero)
     }
 
 
@@ -115,6 +115,7 @@ function Heroes(){
     for (let i = 0; i < hero.length; i++) {
         hero[i].legs = newLegArray[i];
         }
+        console.log(hero)
 }
     const dispatch = useDispatch();
 
@@ -131,7 +132,7 @@ function Heroes(){
         legCount();
         // Kommer att lägga till knappar med onclick för funktionerna sen    
       //  SortAlphabetically();
-        SortWinRate();
+      //  SortWinRate();
 
         return (
             <>
@@ -168,6 +169,8 @@ function Heroes(){
                                     <div>{i.winrate}% Win rate</div> 
                                 </div>
                             </div>)
+                        } else if (i.localized_name === 'Marci'){
+                            return ''
                         } else {
                             return (
                             <div className={'herodiv' + ' ' + i.localized_name} onClick={()=>setSelectedHero(i.id)}>
