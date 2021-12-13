@@ -6,54 +6,14 @@ import {changeURL, getGame} from './GameSlice'
 function Heroes(){
     const url = 'https://api.opendota.com/api/heroStats';
     const [hero, setHero] = useState();
-    const [legAmount, setLegAmount] = useState([]);
     const [selectedHero, setSelectedHero] = useState(1);
-    const [updatedArray, setUpdatedArray] = useState([]);
- 
-    var legArray = 
-    [
-        2,
-        2,4,2,2,
-        2,2,2,6,
-        0,0,2,2,
-        2,0,6,2,
-        2,2,2,2,
-        2,2,2,2,
-        2,0,2,2,
-        2,2,0,2,
-        2,2,2,2,
-        2,0,2,2,
-        2,2,2,2,
-        0,6,2,2,
-        2,4,2,2,
-        2,2,2,4,
-        2,2,8,2,
-        4,2,4,6,
-        0,0,2,2,
-        4,2,4,2,
-        2,4,4,2,
-        2,2,6,10,
-        2,2,2,2,
-        4,6,0,6,
-        0,2,2,0,
-        2,4,4,4,
-        2,2,2,6,
-        2,2,6,2,
-        2,4,2,2,
-        2,2,2,2,
-        2,2,2,2,
-        2,6,2,2
-    ];
 
-    useEffect(() => {
-        setLegAmount(legArray)
-    },[])
 
     useEffect(() => {
         axios.get(url)
         .then(response => {
             setHero(response.data)
-        })
+        }) 
     }, [url])
     
     
@@ -84,22 +44,16 @@ function Heroes(){
     }
 
     function SortLegs() {
-        let newLegArray = legAmount.sort(function(a,b) { return b - a; });
-        let newArray = hero.sort((a, b) => b.legs - a.legs);
-        setLegAmount([...newLegArray]);        
+        let newArray = hero.sort((a, b) => b.legs - a.legs);       
         setHero([...newArray]);
         console.log(hero);
     }
 
     function SortLegsReverse() {
-        let newLegArray = legAmount.sort(function(a,b) { return a - b; });
         let newArray = hero.sort((a, b) => a.legs - b.legs)
         setHero([...newArray]);
-        setLegAmount([...newLegArray]);
         console.log(hero)
     }
-
-
 
      function winRate() {
          let winArray = hero.map((i) => Math.round(i.pro_win / i.pro_pick * 100));
@@ -109,14 +63,6 @@ function Heroes(){
             
             console.log(hero)
  }
-
- function legCount() {
-     let newLegArray = legAmount.map(obj => { let lObj = obj; return lObj});
-    for (let i = 0; i < hero.length; i++) {
-        hero[i].legs = newLegArray[i];
-        }
-        console.log(hero)
-}
     const dispatch = useDispatch();
 
     const handlegetGame = () => {
@@ -129,10 +75,8 @@ function Heroes(){
 
        /* <button onClick={()=>handlegetGame()}></button>*/
         winRate();  
-        legCount();
-        // Kommer att lägga till knappar med onclick för funktionerna sen    
-      //  SortAlphabetically();
-      //  SortWinRate();
+        console.log('test')
+        console.log(hero);
 
         return (
             <>
