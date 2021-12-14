@@ -250,13 +250,6 @@ a {
   margin-top:250px;
 }
 
-<<<<<<< HEAD
-
-button {
-  height:200px;
-  width: 200px;
-  margin-top:200px;
-=======
 .sort_button {
   font-weight: 700;
   font-size: 16px;
@@ -267,7 +260,6 @@ button {
   background:#ff9000;
   cursor: pointer;
   box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 6px, rgba(0, 0, 0, 0.12) 0px -6px 6px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 4px 5px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
->>>>>>> origin/nybranch
 }
 
 .friends {
