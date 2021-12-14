@@ -2,6 +2,7 @@ import React from 'react';
 import '../App.css';
 import {Link} from 'react-router-dom'
 import Heroes from './Heroes'
+import League from './League'
 import About from './About'
 import Home from './Home'
 import Logo from '../img/logo-v1.png'
@@ -14,7 +15,7 @@ function Nav() {
             <Link to='/' className="navItem" element={Home}><img src={Logo} alt=""></img></Link>
             <ul className="navMenu">
                 <li>
-                    <span className="menu-button">League Of Legends</span>
+                    <span className="menu-button"><Link to='/League' className="navItem" element={League}>League of legends</Link></span>
                 </li>
                 <li>
                     <span className="menu-button"><Link to='/heroes' className="navItem" element={Heroes}>DOTA 2</Link></span>

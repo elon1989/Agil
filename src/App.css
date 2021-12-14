@@ -85,6 +85,10 @@ a {
 .heroImg {
   margin-top:2rem;
 }
+.champImg {
+  height:200px;
+  width: 300px;
+}
 .heroPic {
   width:300px;
   height:200px;

@@ -1,5 +1,6 @@
 import './App.css';
 import Heroes from './components/Heroes';
+import League from './components/League';
 import Nav from './components/Nav';
 import About from './components/About';
 import Home from './components/Home';
@@ -27,6 +28,8 @@ function App() {
         <Nav />
           <Routes>
             <Route path="/" element={<Home />} />
+            <Route path="/heroes" element={<Heroes />} />
+            <Route path="/league" element={<League />} />
             <Route path="/heroes" element={<Heroes />} />
             <Route path="/about" element={<About />} />
           </Routes>
