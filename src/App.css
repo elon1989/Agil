@@ -37,7 +37,7 @@ a {
     'showcase showcase showcase showcase'
     'showcase showcase showcase showcase'
     ;
-  padding-top: 200px;
+  padding-top: 50px;
 }
 .hero_item {
   grid-area: showcase;
@@ -241,13 +241,35 @@ a {
   color: #fff;
   min-height: 100vh;
 }
+.sortSection {
+  display: flex;
+  justify-content: space-evenly;
+  width:60vw;
+}
+.sortContainer {
+  margin-top:250px;
+}
 
+<<<<<<< HEAD
 
 button {
   height:200px;
   width: 200px;
   margin-top:200px;
+=======
+.sort_button {
+  font-weight: 700;
+  font-size: 16px;
+  letter-spacing: 1.4px;
+  padding: 12px 20px;
+  border-radius: 10px;
+  border: 2px solid #000;
+  background:#ff9000;
+  cursor: pointer;
+  box-shadow: rgba(0, 0, 0, 0.15) 0px 6px 6px, rgba(0, 0, 0, 0.12) 0px -6px 6px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 4px 5px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+>>>>>>> origin/nybranch
 }
+
 .friends {
   display: flex;
   justify-content: space-around;
