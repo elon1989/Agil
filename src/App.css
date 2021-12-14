@@ -109,7 +109,7 @@ header {
   color: #000;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 20px 35px;
   border-bottom: 1px solid black;
-  position: absolute;
+  position: absolute!important;
   top: 0px;
   width: 100%;
 

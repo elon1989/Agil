@@ -14,7 +14,7 @@ function About() {
                         <h3>Elon Månsson</h3>
                         <p>Favorite hero: <p><span className="questionHighlight">Invoker - DOTA 2</span></p></p>
                         <p>First MOBA ever played: <p><span className="questionHighlight">Dota</span></p></p>
-                        <p>Number of games: <p><span className="questionHighlight">200(?)</span></p></p>
+                        <p>Number of games: <p><span className="questionHighlight">4455</span></p></p>
                         <p>Best gaming memory: <p><span className="questionHighlight">Beating a semipro in dota 2</span></p></p>
                     </div>
                     <div className="persons">
